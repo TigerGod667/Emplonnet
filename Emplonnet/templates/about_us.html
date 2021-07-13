@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emplonnet-About Us
+</title>
+</head>
+<body>
+<style>
+<style>
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+p {
+ font-family: Comic Sans MS;
+}
+
+.header {
+  font-family: Matura MT Script Capitals;
+  font-size: 40px;
+  text-align: center;
+  color: red;
+  padding: 1px;
+  text-shadow: 2px 4px yellow;
+}
+.navbar {
+ overflow: hidden;
+ height: 70px;
+ background-color: #000000;
+ opacity: 1;
+}
+.navbar a {
+ font-weight: bold;
+ font-family: Tempus Sans ITC;
+ float: right;
+ display: block;
+ color: white;
+ text-decoration: none;
+ text-align: center;
+ padding: 20px 30px;
+  transition-duration: 0.7s;
+}
+.navbar img {
+ float: left;
+ display: block;
+ color: white;
+ !background-color: black;
+ text-decoration: none;
+ text-align: center;
+
+}
+
+.navbar a:hover {
+ background-color: white;
+ color: black;
+ opacity: 1;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+body {
+  font-family: Comic Sans MS;
+  margin: 0;
+  font-size: 19px;
+  color: white;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  margin-bottom: 16px;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4),black);
+
+  color: white;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 1);
+  margin: 8px;
+  height: 671px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+    color: rgb(170,170,170);
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.createbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 30%;
+  border-radius: 40%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 10px;
+  color: black;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  opacity: 0.95;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  height: 85%;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+.button {
+  width: 300px;
+  height: 80px;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: Transparent;
+  color: white;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.createbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 30%;
+  border-radius: 40%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 10px;
+  color: black;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  opacity: 0.95;
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 40%; /* Could be more or less, depending on screen size */
+  height: 85%;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn,.signupbtn {
+     width: 100%;
+  }
+}
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.loginbtn {
+  font-weight: bold;
+  font-family: Tempus Sans ITC;
+  float: right;
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 30px 30px;
+}
+
+.topleft {
+  position: absolute;
+  top: 5px;
+  left: 30px;
+}
+
+</style>
+</head>
+<body>
+  <div class="navbar">
+  <img class="topleft" src = "/static/img/Emplonnet__1_-removebg.png" height="60" width="160" >
+  <a href="/home/">        Home            </a>
+  <a href="/work/">Get My Work Done</a>
+  <a href="/aboutus/">About Us</a>
+  </div>
+  <!---->
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <center><img src="/static/img/WhatsApp Image 2021-06-19 at 23.51.03.jpeg" alt="Jane" style="width:300px;height:397px">
+      <div class="container">
+        <h2>Logeshavan R</h2>
+        <p class="title">Project Manager, Web Master</p>
+        <p>Student in Thiagarajar College Of Engineering, Madurai</p>
+        <p>logeshavan@student.tce.edu</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <center><img src="/static/img/WhatsApp Image 2021-06-19 at 23.58.46.jpeg" alt="Jay" style="width:300px;height:397px">
+      <div class="container">
+        <h2>Jayshree V</h2>
+        <p class="title">Liasion Officer, Archivist</p>
+        <p>Student in Thiagarajar College Of Engineering, Madurai</p>
+        <p>jayshree@student.tce.edu</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <center><img src="/static/img/WhatsApp Image 2021-06-19 at 23.52.51.jpeg" alt="dk" style="width:300px;height:397px">
+      <div class="container">
+        <h2>Dinesh Kumar M</h2>
+        <p class="title">Financial Officer</p>
+        <p>Student in Thiagarajar College Of Engineering, Madurai</p>
+        <p>mdineshkumar@student.tce.edu</p></center>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emplonnet-Book
+</title>
+<link rel="stylesheet" href="/static/css/externalCSS.css">
+<link href="/static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+<link href="/static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+<!-- Font special for pages-->
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+<link href="/static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+<link href="/static/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link href="/static/css/main.css" rel="stylesheet" media="all">
+<style>
+        .main {
+            display: block;
+            position: relative;
+            padding-left: 45px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            color: white;
+            height: 30px; */
+        }
+
+        /* Hide the default checkbox */
+        input[type=checkbox] {
+            visibility: hidden;
+        }
+
+        /* Creating a custom checkbox
+        based on demand */
+        .geekmark {
+            position: absolute;
+            top: 18px;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: Grey;
+        }
+
+        /* Specify the background color to be
+        shown when hovering over checkbox */
+        .main:hover input ~ .geekmark {
+            background-color: yellow;
+        }
+
+        /* Specify the background color to be
+        shown when checkbox is active */
+        .main input:active ~ .geekmark {
+            background-color: red;
+        }
+
+        /* Specify the background color to be
+        shown when checkbox is checked */
+        .main input:checked ~ .geekmark {
+            background-color: green;
+        }
+
+        /* Checkmark to be shown in checkbox */
+        /* It is not be shown when not checked */
+        .geekmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        /* Display checkmark when checked */
+        .main input:checked ~ .geekmark:after {
+            display: block;
+        }
+
+        /* Styling the checkmark using webkit */
+        /* Rotated the rectangle by 45 degree and
+        showing only two border to make it look
+        like a tickmark */
+        .main .geekmark:after {
+            left: 8px;
+            bottom: 5px;
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 4px 4px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body style="font-size: 16px;color: black;background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/img/work_do.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+margin: 0px;">
+<div class="navbar" style="font-size: 20px;color: black;">
+<img src = "/static/img/Emplonnet__1_-removebg.png" height="130" width="270">
+<br>
+<a href="/home/">        Home            </a>
+<a href="/where/">Check for works</a>
+<a href="/work/">Get My Work Done</a>
+<a href="/aboutus/">About Us</a>
+<div class="page-wrapper bg-gra-01  p-b-100 font-poppins">
+    <div class="wrapper wrapper--w780">
+        <div class="card card-3">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Enter your details below</h2>
+                <form action="/sign_up/" method="POST">
+                    <div class="input-group">
+                        <input class="input--style-3" required type="text" placeholder="Name" name="name">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3 js-datepicker" type="text" placeholder="Date Of Birth" name="Date Of Birth">
+                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                    </div>
+                    <div class="input-group">
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="gender" style="color:black;" required>
+                                <option disabled="disabled" selected="selected">Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                            <!-- <input class="input--style-3" type="checkbox" placeholder="Home Appliances" name="Home Appliances" id="Home Appliances"> -->
+                        </div>
+                    </div>
+                    <div class="input-group" style="color:white;">
+                    Check The Domains You are talented with
+                    <label class="main">Home Appliances<input type="checkbox" name="works" value="Home Appliances"><span class="geekmark"></span></label>
+                    <label class="main">Electronics<input type="checkbox" name="works" value="Electronics"><span class="geekmark"></span></label>
+                    <label class="main">Electricals<input type="checkbox" name="works" value="Electricals"><span class="geekmark"></span></label>
+                    <label class="main">Plumbing<input type="checkbox" name="works" value="Plumbing"><span class="geekmark"></span></label>
+                    <label class="main">Farm<input type="checkbox" name="works" value="Farm"><span class="geekmark"></span></label>
+                    <label class="main">Maid<input type="checkbox" name="works" value="Maid"><span class="geekmark"></span></label>
+                    <label class="main">Monthly Employee<input type="checkbox" name="works" value="Monthly Employee"><span class="geekmark"></span></label><br>
+                  </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="Phone" name="phone" required>
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="Aadhar Number" name="Aadhar Number" required>
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" required placeholder="Password" name="password" id="psw" type="password"><label class="main">Show Password<input type="checkbox" id="psw" onclick="myFunction()"><span class="geekmark"></span><br>
+                    </div>
+                    <div class="p-t-10">
+                        <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                    </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <script>
+  function myFunction() {
+    var x = document.getElementById("psw");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+  </script>
+<!-- Jquery JS-->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<!-- Vendor JS-->
+<script src="/static/vendor/select2/select2.min.js"></script>
+<script src="/static/vendor/datepicker/moment.min.js"></script>
+<script src="/static/vendor/datepicker/daterangepicker.js"></script>
+
+<!-- Main JS-->
+<script src="/static/js/global.js"></script>
+</body>
+</html>

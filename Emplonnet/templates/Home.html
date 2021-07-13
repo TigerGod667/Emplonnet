@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emplonnet
+</title>
+<link rel="stylesheet" href="/static/css/externalCSS.css">
+</head>
+<body>
+{% if alert1 %}
+<script>window.alert("Email Already Exists");
+</script>
+{% endif %}
+{% if alert2 %}
+<script>
+  window.alert("Wrong Credentials. Please try again!");
+</script>
+{% endif %}
+{% if alert4 %}
+<script>
+  window.alert("A problem occured in the server. Please try again later!");
+</script>
+{% endif %}
+{% if login_alert %}
+<script>window.alert("Please Log in to check for your works");
+</script>
+{% endif %}
+{% if success2 %}
+<script>window.alert("Your work demand was successfully sent to all employees having experience in that field of work. Please stay tuned until a employee contacts you");
+</script>
+{% endif %}
+
+<div class="navbar">
+<img src = "/static/img/Emplonnet__1_-removebg.png" height="130" width="270" >
+<br>
+<a href="/home/">        Home            </a>
+<a onclick="document.getElementById('id01').style.display='block'" style="cursor: pointer;width:auto;">Login-Employee</a>
+<a href="/where/">Check for works</a>
+<a href="/work/">Get My Work Done</a>
+<a href="/aboutus/">About Us</a>
+</div>
+<marquee>Unemployment is slowly increasing in our country. Many have lost the jobs in this lockdown also. So, This is a platform for connecting employees and employers. This could include daily wage works or monthly salary works.
+</marquee>
+<!---->
+<div class="row">
+    <div class="side">
+      <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="/static/img/photo-1542621334-a254cf47733d.jpg" style="height: 530px;width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="/static/img/photo-1560846389-8c7e1d88eca8.jpg" style="height: 530px;width:100%">
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="/static/img/photo-1504222490345-c075b6008014.jpg" style="height: 530px;width:100%">
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="/static/img/photo-1571505280193-4b4e29712a77.jpg" style="height: 530px;width:100%">
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="/static/img/I3.jpg" style="height: 530px;width:100%">
+      </div>
+      </div>
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+<div class="main">
+
+  <br><br><br><br><br>Get Your Work Done by just one click. Get to know about the workers who comes to finish the work.<br><br>
+  <center><a href="/work/"><button class="button button2"style="cursor: pointer;width:auto;">Get Started</button></center></a>
+<mark opacity="0.5"></b>
+<br></div>
+</div>
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" action="/login/" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/static/img/profile.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <br><br>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required><input type="checkbox" onclick="myFunction()">Show Password
+      <br><br>
+      <center><button type="submit" style="font-size:21px;">Login</button></center>
+      <br>
+      <span class="psw1"><a style="cursor:pointer;color:blue;" href="/employee/">Create Account</a></span>
+      <span class="psw"><a style="cursor:pointer;color:blue;" onclick="document.getElementById('id01').style.display='none',document.getElementById('id02').style.display='block'"><u>Forgot password?</u></a></span>
+    </div>
+  </form>
+</div>
+
+<div id="id02" class="modal">
+  <form class="modal-content animate" action="/reset_pass/" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none',document.getElementById('id01').style.display='block'" class="close" title="Close Modal">&times;</span>
+      <img src="/static/img/profile.jpg" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      We will send a 6 digit verification code to verify that it is you. After entering the mail, please check the inbox of the corresponding mail and enter the code.<br><br><br>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <br><br><br>
+      <center><button type="submit" style="font-size:21px;width:50%">Send Code</button></center>
+      <br>
+    </div>
+  </form>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("psw");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+var slideIndex = 0;
+showSlides();
+var modal = document.getElementById('id01');
+var modal = document.getElementById('id02');
+var modal = document.getElementById('id03');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000);
+}
+</script>
+</body>
+</html>

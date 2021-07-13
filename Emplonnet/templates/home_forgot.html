@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emplonnet
+</title>
+<link rel="stylesheet" href="/static/css/externalCSS.css">
+</head>
+<body>
+{% if alert1 %}
+<script>window.alert("Email Already Exists");
+</script>
+{% endif %}
+{% if alert2 %}
+<script>
+  window.alert("Wrong Credentials. Please try again!");
+</script>
+{% endif %}
+{% if alert3 %}
+<script>
+  window.alert("Login Successful!");
+</script>
+{% endif %}
+{% if alert4 %}
+<script>
+  window.alert("A problem occured in the server. Please try again later!");
+</script>
+{% endif %}
+{% if alert5 %}
+<script>
+  window.alert("Wrong verification code. Please try again!");
+</script>
+{% endif %}
+
+{% if code_check %}
+<div id="id01" class="modal" style="display:block;">
+  <form class="modal-content" action="/check_reset/" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/static/img/profile.jpg" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+      Please check your email. You would have received a 6 digit code. Please type the code below if you have received it.<br>
+      <input type="password" placeholder="Enter the Code" name="code" id="code" required><input type="checkbox" onclick="myFunction()">Show code
+      <br>
+      <center><button  style="font-size:21px;width:150px;" type="submit">Check</button></center>
+    </div>
+  </form>
+</div>
+{% endif %}
+
+{% if correct %}
+<div id="id01" class="modal" style="display:block;">
+  <form class="modal-content" style="height:450px;" action="/confirm_reset/" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="/static/img/profile.jpg" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+      Please Enter the new password below.<br>
+      <input type="password" placeholder="Enter a new Password" name="psw" id="psw" required><input type="checkbox" onclick="myFunction1()">Show Password
+      <br>
+      <center><button  style="font-size:21px;width:150px;" type="submit">Submit</button></center>
+    </div>
+  </form>
+</div>
+{% endif %}
+
+
+<script>
+function myFunction1() {
+  var x = document.getElementById("psw");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+function myFunction() {
+  var x = document.getElementById("code");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
+</body>
+</html>

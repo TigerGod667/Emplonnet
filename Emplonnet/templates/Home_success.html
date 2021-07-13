@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emplonnet
+</title>
+<link rel="stylesheet" href="/static/css/externalCSS.css">
+</head>
+<body>
+{% if alert3 %}
+<script>
+  window.alert("Login Successful!");
+</script>
+{% endif %}
+{% if success1 %}
+<script>window.alert("Password Changed successfully and Logged in");
+</script>
+{% endif %}
+{% if success2 %}
+<script>window.alert("Your work request was successfully sent to all employees having experience in that field of work. Please stay tuned until a employee contacts you");
+</script>
+{% endif %}
+
+<div class="navbar">
+<img src = "/static/img/Emplonnet__1_-removebg.png" height="130" width="270" >
+<br>
+<a href="/logout/">Logout</a>
+<a href="/where/" target="_blank">Check for works</a>
+<a href="/work/">Get My Work Done</a>
+<a href="/aboutus/">About Us</a>
+</div>
+<marquee>Unemployment is slowly increasing in our country. Many have lost the jobs in this lockdown also. So, This is a platform for connecting employees and employers. This could include daily wage works or monthly salary works.
+</marquee>
+<!---->
+<div class="row">
+    <div class="side">
+      <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 5</div>
+        <img src="/static/img/photo-1542621334-a254cf47733d.jpg" style="height: 530px;width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 5</div>
+        <img src="/static/img/photo-1560846389-8c7e1d88eca8.jpg" style="height: 530px;width:100%">
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="/static/img/photo-1504222490345-c075b6008014.jpg" style="height: 530px;width:100%">
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="/static/img/photo-1571505280193-4b4e29712a77.jpg" style="height: 530px;width:100%">
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="/static/img/I3.jpg" style="height: 530px;width:100%">
+      </div>
+      </div>
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+<div class="main">
+
+  <br><br><br><br><br>Get Your Work Done by just one click. Get to know about the workers who comes to finish the work.<br><br>
+  <center><a href="/work/"><button class="button button2"style="cursor: pointer;width:auto;">Get Started</button></a></center>
+<mark opacity="0.5">
+<br></div>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000);
+}
+</script>
+</body>
+</html>

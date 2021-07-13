@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emplonnet-Book
+</title>
+<link rel="stylesheet" href="/static/css/externalCSS.css">
+<link href="/static/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+<link href="/static/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+<!-- Font special for pages-->
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="/static/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+<link href="/static/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+<!-- Main CSS-->
+<link href="/static/css/main.css" rel="stylesheet" media="all">
+
+</head>
+<script>
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showPosition);
+} else {
+  window.alert("Geolocation is not supported by this browser. So please give your location address manually");
+}
+function showPosition(position) {
+  var x = position.coords.latitude +
+  ", " + position.coords.longitude;
+  document.getElementById("current_location").value = x;
+}
+</script>
+<body style="font-size: 16px;color: black;background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/img/work_do.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: 100% 100%;
+margin: 0px;">
+<div class="navbar" style="font-size: 20px;color: black;">
+<img src = "/static/img/Emplonnet__1_-removebg.png" height="130" width="270">
+<br>
+<a href="/home/">        Home            </a>
+<a href="/aboutus/">About Us</a></div><br>
+<div class="page-wrapper bg-gra-01  p-b-100 font-poppins">
+    <div class="wrapper wrapper--w780">
+        <div class="card card-3">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Fix an Appointment</h2>
+                <p style="color:white;">Please enter your details so that we get to know about some details of the work to be completed</p><br>
+                <form action='/work_info/' method="POST" name="frm1">
+                    <div class="input-group">
+                        <input class="input--style-3" required type="text" placeholder="Name" name="name">
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3 js-datepicker" type="text" placeholder="Deadline Date" name="deadline_date">
+                        <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                    </div>
+                    <div class="input-group">
+                        <div class="rs-select2 js-select-simple select--no-search">
+                            <select name="location" style="color:black;" onchange='CheckLocation(this.value);' required>
+                                <option disabled="disabled" selected="selected">Select Location</option>
+                                <option>Current Location</option>
+                                <option>Custom Location</option>
+                            </select>
+                            <div class="select-dropdown"></div>
+                            <input type="hidden" name="current_location" id="current_location" value="">
+                            <input class="input--style-3" type="text" required placeholder="Enter the Custom Location" name="location1" id="location" style='display:none;'/>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="Phone" name="phone" required>
+                    </div>
+                    <div class="input-group">
+                        <input class="input--style-3" type="text" placeholder="Aadhar Number" name="Aadhar Number" required>
+                    </div>
+                    <div class="input-group">
+                    <div class="rs-select2 js-select-simple select--no-search">
+                        <select name="work_domain" placeholder="Domain of work" onchange='CheckDomain(this.value);'>
+                        <option disabled="disabled" selected="selected">Select Domain</option>
+                        <option>Home Appliances</option>
+                        <option>Electronics</option>
+                        <option>Electricals</option>
+                        <option>Plumbing</option>
+                        <option>Farm</option>
+                        <option>Maid</option>
+                        <option>Monthly Employee</option>
+                        <option>Other</option>
+                      </select>
+                      <div class="select-dropdown"></div>
+                      <input class="input--style-3" type="text" placeholder="Enter the Domain if known" name="work_domain" id="work_domain" style='display:none;'/>
+                    </div>
+                    </div>
+                    <div class="input-group">
+                        <textarea class="input--style-3" required placeholder="Give some Description of the work to be done" name="work_desc" style="overflow:hidden; height:100px;width:350px"></textarea>
+                    </div>
+                    <div class="p-t-10">
+                        <button class="btn btn--pill btn--green" onclick="document.frm1.submit();" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>function CheckLocation(val){
+ var element=document.getElementById('location');
+ if(val=='Custom Location' || val=="Select Location")
+   element.style.display='block';
+ else {
+   element.style.display='none';
+ }
+
+}
+function CheckDomain(val){
+ var element=document.getElementById('work_domain');
+ if(val=='Other' || val=="Select Domain")
+   element.style.display='block';
+ else
+ {
+   element.style.display='none';
+ }
+
+}
+</script>
+<!-- Jquery JS-->
+<script src="/static/vendor/jquery/jquery.min.js"></script>
+<!-- Vendor JS-->
+<script src="/static/vendor/select2/select2.min.js"></script>
+<script src="/static/vendor/datepicker/moment.min.js"></script>
+<script src="/static/vendor/datepicker/daterangepicker.js"></script>
+
+<!-- Main JS-->
+<script src="/static/js/global.js"></script>
+</body>
+</html>
